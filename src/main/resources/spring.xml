@@ -2,6 +2,7 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:aop="http://www.springframework.org/schema/aop"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         http://www.springframework.org/schema/beans/spring-beans.xsd
         http://www.springframework.org/schema/context
@@ -9,12 +10,9 @@
         http://www.springframework.org/schema/aop
         http://www.springframework.org/schema/aop/spring-aop-4.3.xsd">
 
-    <bean id="config" class="com.southwind.ioc.DataConfig">
-        <property name="driverName" value="Driver"></property>
-        <property name="url" value="localhost:8080"></property>
-        <property name="username" value="root"></property>
-        <property name="password" value="1234"></property>
-    </bean>
+    <context:component-scan base-package="com.southwind.aop"></context:component-scan>
+
+    <aop:aspectj-autoproxy></aop:aspectj-autoproxy>
 
 </beans>
 
