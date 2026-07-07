@@ -8,7 +8,7 @@ public class Test {
         /*  ApplicationContext context = new ClassPathXmlApplicationContext("spring.xml");
         System.out.println(context.getBean("config"));*/
         ApplicationContext context = new AnnotationConfigApplicationContext("com.southwind.ioc");
-        System.out.println(context.getBean(DataConfig.class));
+        System.out.println(context.getBean(GlobalConfig.class));
 
 
     }
